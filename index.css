@@ -1,0 +1,107 @@
+
+
+/* ヘッター部分のレイアウト */
+.header-area {
+    display: flex;
+    border-radius: 10px;
+    background-color: #f0f0f0 ;
+    border-bottom: 5px groove #f0f0f0 ;
+}
+
+/* 検索フォームの基本スタイル */
+.search-container {
+    position: relative;
+    width: 200px;
+}
+.search-input {
+    width: 100%;
+    padding: 8px;
+    font-size: 13px;
+}
+
+/* 予測変換リスト */
+.suggestions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    height: 0px;
+    max-height: 150px;
+    overflow-y: auto;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* 予測変換リスト項目 */
+.suggestions li {
+    padding: 8px;
+    cursor: pointer;
+}
+
+.suggestions li:hover {
+    background-color: #f0f0f0;
+}
+
+/* Book-tableのレイアウト */
+.Book-table {
+    width: 100%;
+    height: 100vh;
+}
+
+.title-area {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 50px;
+}
+.item {
+    padding-top: 15px;
+    padding-left: 10px;
+    letter-spacing: 0.15em;
+}
+
+.list-0 {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-top: 5px;
+}
+
+.list {
+    display: grid;
+    grid-template-columns: 85% auto;
+    margin-top: 5px;
+}
+
+.item-box {
+    display: grid;
+    grid-template-columns: 50px 200px 150px 1fr 1fr;
+    grid-template-rows: 50px;
+}
+.box0 {
+    border-radius: 10px;
+    background-color: rgb(182, 182, 182);
+}
+.box1 {
+    border-radius: 10px;
+    background-color: darkseagreen;
+}
+
+.items1 {
+    text-align: center;
+}
+.item-btn {
+    margin: 15px auto;
+    width: 70%;
+    height: 30px;
+    border-radius: 50px;
+    letter-spacing: 0.15em;
+}
+
+
+
+
+
+
+
