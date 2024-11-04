@@ -1,6 +1,3 @@
-
-alert("Hello World!")
-
 // 本の内容をオブジェクトとして格納
 const booksArray = {
     key1: {
