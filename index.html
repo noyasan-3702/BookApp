@@ -16,19 +16,32 @@
 <body>
     <header>
         <div class="header-area">
-            <h2>Book Memo</h2>
-            <div>
+            <div class="header-txt">
+                <h2>Book Memo</h2>
+            </div>
+            <div class="User-operation">
                 <div class="search-container">
-                    <input type="text" class="search-input" id="searchInput" placeholder="検索...">
-                    <ul class="suggestions" id="suggestionsList"></ul>
+                    <input type="text" class="search-input" id="searchInput" placeholder="本の題名を入力...">
+                    <ul id="suggestionsList" class="suggestions-container"></ul>
+                    <div id="searchResults" class="results-container"></div>
+                    <button class="searchbookbtn" id="searchBtn">検索</button>
                 </div>
-                <button>検索</button>
+                <button class="Addbookbtn" id="showModalBtn">新しい本を追加</button>
+                <button class="Borrowbookbtn" id="BorrowbookBtn">本を借りる</button>
             </div>
         </div>
     </header>
     <div class="book-area">
-        <div class="btn-area">
-            <button onclick="BookInfoAdd()">本を借りる</button>
+        <div id="addBookModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>新しい本を追加</h3>
+                <input type="text" id="newTitle" placeholder="本の題名" />
+                <input type="text" id="newAuthor" placeholder="著者" />
+                <input type="date" id="newBorrowedDate" placeholder="貸出日" />
+                <input type="date" id="newReturnDate" placeholder="返却日" />
+                <button class="addBookBtn" id="addBookBtn">本を追加</button>
+            </div>
         </div>
         <div class="Book-table">
             <div class="title-area">
@@ -94,7 +107,7 @@
             </div>
         </div>
     </div>
-    <script src="index.js"></script>
+    <script type="module" src="index.js"></script>
 </body>
 
 </html>
