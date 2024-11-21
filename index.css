@@ -21,8 +21,7 @@
 
 .suggestions-container {
     list-style-type: none; /* デフォルトの箇条書きマークを削除 */
-    margin: 0;
-    padding: 0;
+    margin-top: 28px;
     max-height: 150px;
     overflow-y: auto;
     border: 1px solid #ccc;
@@ -30,21 +29,81 @@
     background-color: #fff;
     position: absolute;
     z-index: 1000;
-    width: 100%;
+    width: 279px;
 }
 
 .suggestion-item {
     padding: 10px;
     cursor: pointer;
-    border-bottom: 1px solid #eee;
 }
 
 .suggestion-item:hover {
     background-color: #f0f0f0;
 }
 
+.suggestions li:hover {
+    background-color: #f0f0f0;
+}
+
+
+/* 検索フォームのレイアウト */
+.book-info {
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+.result-item .book-info {
+    flex: 1; /* タイトル部分をボタンに対して柔軟に広げる */
+    margin-right: 5px;
+}
+
+/* 検索フォーム内のtxt要素 */
+.info-txt {
+    grid-template-rows: 10px 10px 10px 10px; 
+}
+.info-item {
+    margin-top: 5px;
+    margin-left: 5px;
+} 
+
+/* 検索フォーム内で在庫ありの場合 */ 
+.available {
+    color: #32cd32; /* 黄緑色 */
+    font-weight: bold;
+}
+
+/* 検索フォーム内で在庫なしの場合 */ 
+.unavailable {
+    color: #ff0000; /* 赤色 */
+    font-weight: bold;
+}
+
+/* 検索フォームのボタン */
+.info-btn {
+    text-align: right;
+}
+
+.borrow-button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+.borrow-button:hover {
+    background-color: #0056b3;
+}
+.borrow-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* 検索フォームの本情報の表示欄 */
 .results-container {
     margin-top: 10px;
+    padding-left: 0;
 }
 
 .results-list {
@@ -64,9 +123,12 @@
     color: #333;
 }
 
-.suggestions li:hover {
-    background-color: #f0f0f0;
+.result-item .borrow-button:disabled {
+    background-color: #ccc; /* 無効状態の色 */
+    cursor: not-allowed;
 }
+
+
 
 /* モーダル全体の背景 */
 .modal {

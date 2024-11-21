@@ -23,23 +23,26 @@
                 <div class="search-container">
                     <input type="text" class="search-input" id="searchInput" placeholder="本の題名を入力...">
                     <ul id="suggestionsList" class="suggestions-container"></ul>
-                    <div id="searchResults" class="results-container"></div>
                     <button class="searchbookbtn" id="searchBtn">検索</button>
                 </div>
                 <button class="Addbookbtn" id="showModalBtn">新しい本を追加</button>
-                <button class="Borrowbookbtn" id="BorrowbookBtn">本を借りる</button>
             </div>
         </div>
     </header>
     <div class="book-area">
+        <div id="searchBookModal" class="modal">
+            <div class="modal-content">
+                <span class="close" id="closeModal2">&times;</span>
+                <h3>検索した本の一覧</h3>
+                <ul id="searchResults" class="results-container"></ul>
+            </div>
+        </div>
         <div id="addBookModal" class="modal">
             <div class="modal-content">
-                <span class="close">&times;</span>
+                <span class="close" id="closeModal1">&times;</span>
                 <h3>新しい本を追加</h3>
                 <input type="text" id="newTitle" placeholder="本の題名" />
                 <input type="text" id="newAuthor" placeholder="著者" />
-                <input type="date" id="newBorrowedDate" placeholder="貸出日" />
-                <input type="date" id="newReturnDate" placeholder="返却日" />
                 <button class="addBookBtn" id="addBookBtn">本を追加</button>
             </div>
         </div>
@@ -80,26 +83,6 @@
                         </div>
                         <div class="items2">
                             <div class="item">yyyy/mm/dd(aaa)</div>
-                        </div>
-                    </div>
-                    <button class="item-btn">本を返す</button>
-                </div>
-                <div class="list">
-                    <div class="item-box box1">
-                        <div class="items1">
-                            <div class="item">1</div>
-                        </div>
-                        <div class="items2">
-                            <div class="item">夢を叶えるゾウ</div>
-                        </div>
-                        <div class="items2">
-                            <div class="item">水野 敬也</div>
-                        </div>
-                        <div class="items2">
-                            <div class="item">2023/10/22(日)</div>
-                        </div>
-                        <div class="items2">
-                            <div class="item">2023/10/27(日)</div>
                         </div>
                     </div>
                     <button class="item-btn">本を返す</button>
